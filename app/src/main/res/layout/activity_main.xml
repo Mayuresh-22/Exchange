@@ -58,31 +58,37 @@
 
             <EditText
                 android:id="@+id/fromValInput"
-                android:layout_width="73dp"
+                android:layout_width="150dp"
                 android:layout_height="44dp"
                 android:ems="10"
                 android:hint="VALUE"
+                android:textAllCaps="true"
+                android:capitalize="characters"
                 android:inputType="numberDecimal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.567"
                 app:layout_constraintStart_toEndOf="@+id/fromCurInput"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
-                app:layout_constraintVertical_bias="0.131" />
+                app:layout_constraintVertical_bias="0.131"
+                tools:ignore="Deprecated" />
 
             <EditText
                 android:id="@+id/toValInput"
-                android:layout_width="73dp"
+                android:layout_width="150dp"
                 android:layout_height="44dp"
                 android:ems="10"
                 android:hint="VALUE"
                 android:inputType="numberDecimal"
+                android:textAllCaps="true"
+                android:capitalize="characters"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.571"
                 app:layout_constraintStart_toEndOf="@+id/toCurInput"
                 app:layout_constraintTop_toBottomOf="@+id/fromValInput"
-                app:layout_constraintVertical_bias="0.15" />
+                app:layout_constraintVertical_bias="0.15"
+                tools:ignore="Deprecated" />
 
             <TextView
                 android:id="@+id/textView3"

@@ -21,28 +21,43 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         from = findViewById(R.id.fromCurInput);
         to = findViewById(R.id.toCurInput);
-        fromVal = findViewById(R.id.toValInput);
+        fromVal = findViewById(R.id.fromValInput);
+        toVal = findViewById(R.id.toValInput);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // make loader visible
                 findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
+
+                // validate the data
+                if(fromVal.getText().toString().equals("") || from.getText().toString().equals("") || to.getText().toString().equals("")){
+                    findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
+                    Toast.makeText(MainActivity.this, "Enter all the params", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 // API BASEURL
                 String BASEURL = "https://api.apilayer.com/exchangerates_data/convert?to="+ to.getText().toString() +"&from="+ from.getText().toString() +"&amount=" + fromVal.getText().toString();
-                // String url = "https://v2.jokeapi.dev/joke/Programming";
+
+                // creating JSON request
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                         (Request.Method.GET, BASEURL, null, new Response.Listener<JSONObject>() {
-
                             @Override
                             public void onResponse(JSONObject response) {
                                 findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
-                                Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+                                try{
+                                    toVal.setText(response.getString("result"));
+                                } catch (Exception e){
+                                    toVal.setText("");
+                                }
                             }
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
-                                Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                                toVal.setText("");
+                                Toast.makeText(MainActivity.this, "Try Again...", Toast.LENGTH_SHORT).show();
                             }
                         }) {
                     @Override
