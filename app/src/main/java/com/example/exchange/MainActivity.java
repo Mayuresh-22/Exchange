@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                                     // displaying result
                                     toVal.setText(response.getString("result"));
                                     // displaying other information
-                                    exchangeInfo.setText(fromVal.getText().toString() + " " + from.getText().toString() + " is " + response.getString("result") + " in " + toVal.getText().toString() + " on " + response.getString("date"));
+                                    exchangeInfo.setText(fromVal.getText().toString() + " " + from.getText().toString() + " is " + response.getString("result") + " " + to.getText().toString() + " on " + response.getString("date"));
                                 } catch (Exception e){
                                     toVal.setText("");
                                 }
