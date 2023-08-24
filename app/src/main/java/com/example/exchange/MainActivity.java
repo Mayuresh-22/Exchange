@@ -13,16 +13,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    public EditText from, to, fromVal, toVal;
+    private EditText from, to, fromVal, toVal;
+    private TextView exchangeInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // getting widgets
         from = findViewById(R.id.fromCurInput);
         to = findViewById(R.id.toCurInput);
         fromVal = findViewById(R.id.fromValInput);
         toVal = findViewById(R.id.toValInput);
+        exchangeInfo = findViewById(R.id.exchangeInfo);
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
                             public void onResponse(JSONObject response) {
                                 findViewById(R.id.progressBar).setVisibility(View.INVISIBLE);
                                 try{
+                                    // displaying result
                                     toVal.setText(response.getString("result"));
+                                    // displaying other information
+                                    exchangeInfo.setText(fromVal.getText().toString() + " " + from.getText().toString() + " is " + response.getString("result") + " in " + toVal.getText().toString() + " on " + response.getString("date"));
                                 } catch (Exception e){
                                     toVal.setText("");
                                 }
