@@ -169,7 +169,7 @@
         android:layout_marginTop="100dp"
         android:background="?attr/colorPrimary"
         android:paddingTop="12dp"
-        android:text="@string/app_by_mayuresh"
+        android:text="@string/app_by_aditya"
         android:textAlignment="center"
         android:textColor="?attr/colorOnPrimary"
         android:textSize="16dp"
