@@ -24,12 +24,12 @@ This Currency Converter Android App provides a simple and efficient way to conve
 
 ## Screenshots
 ### Dark Mode
-![Before In Dark mode](https://github.com/Mayuresh-22/Exchange/assets/111348926/aad5f1a6-7196-4687-9caa-0712f2c2e5b1)
-![After in Dark mode](https://github.com/Mayuresh-22/Exchange/assets/111348926/52045513-64bc-4444-a1a7-81d1ca8b7e6b)
+<img src="https://github.com/Mayuresh-22/Exchange/assets/111348926/aad5f1a6-7196-4687-9caa-0712f2c2e5b1" width="300" height="647">
+<img src="https://github.com/Mayuresh-22/Exchange/assets/111348926/52045513-64bc-4444-a1a7-81d1ca8b7e6b"  width="300" height="647">
 
-### Light mode
-![Before in Light mode](https://github.com/Mayuresh-22/Exchange/assets/111348926/6ec25ada-a0e1-4649-b781-4d7351f2623f)
-![After in Light mode](https://github.com/Mayuresh-22/Exchange/assets/111348926/1a8a41b8-d45e-4804-abc1-27e597538eeb)
+### Light mod
+<img src="https://github.com/Mayuresh-22/Exchange/assets/111348926/6ec25ada-a0e1-4649-b781-4d7351f2623f" width="300" height="647">
+<img src="https://github.com/Mayuresh-22/Exchange/assets/111348926/1a8a41b8-d45e-4804-abc1-27e597538eeb" width="300" height="647">
 
 ## Feedback
 
